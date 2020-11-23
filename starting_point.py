@@ -1,23 +1,49 @@
+from random import shuffle 
+from operator import itemgetter, attrgetter
+
 class Deck:
   
   def __init__(self):
-    # define instance attributes here
+    self.cards = [] 
+    self.generate_cards()
+    self.reset_cards()
+    self.shuffle_cards()
 
   def generate_cards(self):
-    # define this method here
-    # also, where should this method be called?
+    print("generate_cards")
+    for suit in ["Clubs", "Diamonds", "Heart", "Spades"]:  
+        for rank in range (1, 14):                         
+            card = str(rank) + " " + "of" + " " + suit 
+            self.cards.append(card)
+    print(*self.cards, sep = "\n")
   
   def reset_cards(self):
-    # define this method here
+    print("reset cards")
+    sorted(self.cards, key=itemgetter(0))
+    print(self.cards)
   
   def shuffle_cards(self):
-    # define this method here
-
+    print("shuffle cards")
+    shuffle(self.cards)   
+    print(*self.cards, sep = "\n")
+    
+deck = Deck() 
+deck.reset_cards()
+deck.shuffle_cards()
 
 class Card:
 
   def __init__(self):
-    # define instance attributes here
+    self.suit = suit
+    self.value = value
+    self.is_face_up = is_face_up 
+    self.flip_card()
+    
+  def face_up(self):
+    if self.is_face_up == True:          
+      print("Is faced up")
+    else:
+      print ("Is faced down")
   
   def flip_card(self):
     # define this method here
