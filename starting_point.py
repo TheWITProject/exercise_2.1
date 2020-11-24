@@ -41,11 +41,17 @@ class Card:
     
   def face_up(self):
     if self.is_face_up == True:          
-      print("Is faced up")
+      return "Is faced up"
     else:
-      print ("Is faced down")
-  
-  def flip_card(self):
+      return "Is faced down"
+
+  def flip_card(self):   
+    if self.face_up() == "Is faced down":
+      return "Face up"
+    elif self.face_up() == "Is faced up":
+      return "Face down"
+
+card1.face_up()
+print(card1.flip_card())
    
-    # define this method here
   
