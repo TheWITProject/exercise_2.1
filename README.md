@@ -10,7 +10,7 @@ Create an object oriented design for a deck of cards. You can do this from scrat
   - We probably want to separate our `Deck` class and our `Card` class.
   - We can even create a `Suit` class that extends the `Card` class. Would this be overkill though? Explain why or why not in the codeblock below.
   ```
-  Explain your thoughts  here.
+  It could be helpful to organize the information in a suit class, bit this could also be overkill because you could create a print_suit function in the Card class   that tells you the suit. That way you wouldn't need a Suit class.
   ```
    
 </details>
