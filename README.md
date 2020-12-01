@@ -10,14 +10,14 @@ Create an object oriented design for a deck of cards. You can do this from scrat
   - We probably want to separate our `Deck` class and our `Card` class.
   - We can even create a `Suit` class that extends the `Card` class. Would this be overkill though? Explain why or why not in the codeblock below.
   ```
-  Explain your thoughts  here.
+I don't think it's overkill. A suit is a type of card so it will have the same features as a card and more.
   ```
    
 </details>
 
 <details>
 <summary>What kind of attributes might we include on each class?</summary>
-  
+
   - Our `Deck` instance needs to know what cards it contains.
   - Our `Card` instance needs to know the suit and value of itself.
   - Our `Card` instance might also want to know whether it's face-up or face-down.
